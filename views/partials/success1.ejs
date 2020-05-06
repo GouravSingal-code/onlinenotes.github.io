@@ -1,0 +1,26 @@
+<% if( typeof msg1!='undefined'){%>
+<div class="alert alert-success" role="alert">
+ <%= msg1 %>
+</div><%
+}
+%>
+
+<% if( typeof msg2!='undefined'){%>
+<div class="alert alert-success" role="alert">
+ <%= msg2 %> <a href="login">Login</a>
+</div><%
+}
+%>
+
+
+<% if(typeof box!='undefined' ){ %> 
+ <%box.forEach(value=>{
+  %>   
+   <button name="delete" formaction="/dashboard2" style="background-color:#8B0000;text-align:centre;color:#FFFFFF" type="submit"  id="delete"class="work1" value="<%=value.value0%>" >delete</button><button name="data" style="width:600px;align-items:center;  text-overflow: ellipsis; white-space: nowrap;overflow: hidden;" value="<%=value.value0%>" class="work2" formaction="/dashboard2" type="submit"><%=value.value1%></button><button name="data" style="width:600px;align-items:center" class="work2" value="<%=value.value0%>" formaction="/dashboard2"><%=value.value2%></button>  
+   <br/>
+   <br/>
+  <%    
+  })%>  
+<%}
+%>
+

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    body{
+        background-image: linear-gradient(to top, #a3bded 100%, #6991c7 100%);
+    }
+
+.container1{
+  margin:0px;
+  height:100%;
+  width:100%;
+
+}
+
+.menubar{
+    height:50px;
+    background-color:darkturquoise;
+    position:fixed;
+    z-index:1;
+}
+
+
+
+
+
+#detail{
+    padding-left:2px;
+    width:570px;
+}  
+    
+    
+    #area{
+        display:none;
+    } 
+    
+    .data{
+       margin-left:auto;
+       margin-right:auto;
+       width:900px;
+       height:600px;
+       overflow-y:scroll;
+       border-style:groove;
+       background-image:url('/17.png');
+       background-repeat:no-repeat;
+       background-size:500px;
+       background-position:center;
+       background-color:grey;
+    }
+    
+
+    .work1{
+     display:block;   
+    }
+    
+      
+      
+</style>
+      
+    
+<title>Login</title>
+
+</head>
+    
+    
+<body>
+      
+<div class="container1">    
+ <div class="menubar">   
+ <div class="btn-group btn-group-lg" role="group" aria-label="Basic example" style="color: aliceblue">
+ <button id="1" type="button" class="btn btn-primary" style="margin-left: 5px">Online Notes</button>
+ <nav id="2" type="button" class="btn btn-primary" style="float:left" onclick=" window.location.href='http://localhost:3000/welcome'">Home</nav>
+ <nav id="3" type="button" class="btn btn-primary" style="float:left"onclick=" window.location.href='http://localhost:3000/help'">Help</nav> 
+ <nav id="4" type="button" class="btn btn-primary" style="float:left"onclick=" window.location.href='http://localhost:3000/contact'">Contact</nav>
+ <nav id="5" type="button" class="btn btn-primary" style="float:left" onclick="window.location.href='http://localhost:3000/profile'">Profile</nav>
+ <nav id="10" type="button" class="btn btn-primary" style="float:right;margin-left:1025px;background-color:#8B0000";position:fixed><%= name %></nav>
+ <nav id="6" type="button" class="btn btn-primary" style="float:right"  onclick=" window.location.href='http://localhost:3000/login'">Login</nav>
+ <nav id="9" type="button" class="btn btn-primary" style="float:right" onclick="window.location.href='http://localhost:3000/'">Logout</nav>
+ </div>
+ </div>  
+    
+ <br/>
+ <br/>
+ <br/>
+
+<button id="add" class="btn btn-success" style="text-align:center"  onclick=" window.location.href='http://localhost:3000/dashboard'" >Done</button>
+<button id="edit" class="btn btn-success" style="text-align:center">Edit</button>
+
+ <div class="data">
+  <form method="post" action="/dashboard2">
+   <%- include('partials/success1') %>
+  </form>
+ </div>
+    
+  <div id="area">
+  <form method="post" action="/dashboard">
+      <label for="exampleFormControlTextarea1" style="margin-left:830px"><h2>Your textarea</h2></label>
+    <textarea style="color:#000000;background-color:#FFFF99;width:800px;height:600px;margin-top:20px;margin-left:auto;margin-right:auto;border:2px solid #FFFF00;font-size:1.5em" class="form-control" name="exampleFormControlTextarea1" id="exampleFormControlTextarea1" placeholder="add some text" wrap="soft" autofocus="autofocus" dirname="explanation.dir" required row="1"></textarea>
+    <button style="margin-left:860px;margin-top:30px"type="submit"id="sub" formaction="/dashboard" name="submit"><h2>Submit</h2></button>
+  </form>
+  </div> 
+     
+  </div>
+ 
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+     <script>
+
+      $(document).ready(function(){
+    
+      
+          
+      });
+      
+    </script>
+      
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+

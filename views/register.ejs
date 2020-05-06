@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    
+    
+body{
+ height:100%;
+ width:100%;
+ background-image: url('/30.jpg'); 
+ background-size:100%;
+ background-repeat:no-repeat;
+ background-position:right;
+ background-position:4px 50px;
+        
+    }
+
+.container1{
+  height:100%;
+  width: 100%;
+  margin:0px; 
+
+}
+
+.menubar{
+width:100%;
+height:50px;
+margin-top:0px;
+margin-left:0px;
+background-color:darkturquoise;
+position: relative;
+z-index:1;
+}
+
+
+    
+    
+.detail1{
+ margin-left:-127px;
+ background:none;
+ outline-style:none;/* outside of border */
+ border-bottom-style:#FFFFFF;
+ border-top-style:hidden;
+ border-right-style:hidden;
+ border-left-style:hidden;
+ position:absolute;
+ top:65px;
+ font-size:1.1em;
+ width:400px;
+ color:#FFFFFF;
+ font-size:1.3em;
+}
+  
+.detail2{
+ margin-left:-70px;
+ background:none;
+ outline-style:none;/* outside of border */
+ border-bottom-style:#FFFFFF;
+ border-top-style:hidden;
+ border-right-style:hidden;
+ border-left-style:hidden;
+ position:absolute;
+ top:143px;
+ font-size:1.3em;
+ width:400px;
+ color:#FFFFFF;
+}
+ 
+.detail3{
+ margin-left:-120px;
+ background:none;
+ outline-style:none;/* outside of border */
+ border-bottom-style:#FFFFFF;
+ border-top-style:hidden;
+ border-right-style:hidden;
+ border-left-style:hidden;
+ position:absolute;
+ top:221px;
+ width:400px;
+ font-size:1em;
+ color:#FFFFFF;
+}
+ 
+.detail4{
+ margin-left:-224px;
+ background:none;
+ outline-style:none;/* outside of border */
+ border-bottom-style:#FFFFFF;
+ border-top-style:hidden;
+ border-right-style:hidden;
+ border-left-style:hidden;
+ position:absolute;
+ top:298px;
+ width:400px;
+ font-size:1em;
+ color:#FFFFFF;
+}
+    
+
+ 
+    
+.awesome{
+  border-color:black;
+  box-shadow:1em 1em 1em 1em #FFFFFF;
+  height:700px;
+  width:1500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:30px;
+
+}
+    
+ 
+    #errors{
+     height:250px;
+     width:250px;
+     position:absolute;
+     left:1250px;
+     top:290px;
+     padding-top:100px;
+     padding-right:18px;
+     text-align:center;
+     overflow:auto;
+     background-image:url('/28.jpg');
+     background-repeat:no-repeat;
+     font-family:solid;
+     color:black;
+     font-size:1.3em;
+     font-weight:bold;
+     background-position:center;
+    }
+    
+     #success{
+     height:250px;
+     width:250px;
+     position:absolute;
+     left:1250px;
+     top:290px;
+     padding-top:30px;
+     padding-right:18px;
+     text-align:center;
+     overflow:auto;
+     background-image:url('/29.jpg');
+     background-repeat:no-repeat;
+     font-family:serif;
+     color:black;
+     font-size:1.1em;
+     font-weight:bold;
+     background-position:center;
+     
+    }
+    
+    .done{
+        position:absolute;
+        left:1200px;
+        top:200px;
+        height:100px;
+        width:600px;
+    }
+ 
+      
+      
+</style>
+      
+    
+<title>Registration</title>
+
+</head>
+    
+    
+<body>
+
+
+
+ <div class="menubar">   
+ <div class="btn-group btn-group-lg" role="group" aria-label="Basic example" style="color: aliceblue">
+ <button id="1" type="button" class="btn btn-primary" style="margin-left: 5px" onclick=" window.location.href='http://localhost:3000/'">Online Notes</button>
+ <input id="2" type="button" class="btn btn-primary" style="float:left" onclick=" window.location.href='http://localhost:3000/welcome'" value="Home"
+ >
+ <input id="3" type="button" class="btn btn-primary" style="float:left" value="Help"
+ onclick=" window.location.href='http://localhost:3000/help'">
+ <input id="4" type="button" class="btn btn-primary" value="Contact"
+ onclick=" window.location.href='http://localhost:3000/contact'">
+ <input id="6" type="button" class="btn btn-primary" style="margin-right:1220px;background-color:#8B0000" value="Register">
+ <input id="5" type="button" class="btn btn-primary" style="float: right" value="Login" onclick=" window.location.href='http://localhost:3000/login'" />
+ </div>
+ </div> 
+
+ 
+ <br/>
+ <br/>
+ 
+<div class="awesome">
+ <p style="font-size: 40px;color:#FFFFFF;margin-left:40px;text-align:center;text-shadow:15px 15px 15px darkgrey;font-weight:bold" > Sign up today and start using our Online Notes App!</p>
+
+ <%- include('partials/login_messages') %>
+
+ <form method="post" action="/register" class="form" style="position:absolute">
+ 
+ <label for="name" id="one" style="font-size:1.7em;color:#8B4513;margin-left:350px;position:relative;top:58px">Username</label>
+ <input  id="name" class="detail1" type="text" name="name"  />
+ <br>
+ <br>
+ <label for="email" id="two" style="font-size:1.7em;color:#8B4513;margin-left:350px;position:relative;top:60px">Email</label>
+ <input id="email" class="detail2" type="email" name="email" />
+ <br>
+ <br>
+ <label for="password" id="three" style="font-size:1.7em;color:#8B4513;margin-left:350px;position:relative;top:60px">Password</label>
+ <input id="password" class="detail3" type="password" name="password" />
+ <br>
+ <br>
+ <label for="confirm" id="four" style="font-size:1.7em;color: 	#8B4513;margin-left:350px;position:relative;top:65px">Confirm Password</label>
+ <input id="confirm" class="detail4" type="password"  name="confirm" />
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <input  type="submit" name="Cancel" style="margin-left:350px;font-size:2em;color:#8B4513" value="Sign Up" class="btn btn-outline-dark" /> 
+ <input  class="btn btn-outline-dark" type="submit" style="margin-left:350px;font-size:2em;color:#8B4513" name="Sign up" value="Cancel" onclick="window.location.href = 'http://localhost:3000/register'"/> 
+ </form>
+ </div>            
+ 
+ 
+        
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+     <script>
+         
+          
+      var detail1= document.getElementById("name");
+      var label1= document.getElementById("one");
+      
+    
+      detail1.onfocus=function(){
+          var x=400;
+        //  detail.style.border-bottom-style = '1px solid #FFC0CB';
+          var counter1 = setInterval(function(){
+             if( x==560){
+               clearInterval(counter1);
+             }
+             detail1.style.width=x+'px'; 
+             x+=20;
+          },20);
+          
+          var y=58;
+          var counter2 = setInterval(function(){
+            if( y==42 ){
+                clearInterval(counter2);
+            }     
+            label1.style.top=y+'px';
+            y--;
+          }, 5 );
+      }
+         
+
+      var detail2= document.getElementById("email");
+      var label2= document.getElementById("two");
+         
+      detail2.onfocus=function(){
+          var x=400;
+        //  detail.style.border-bottom-style = '1px solid #FFC0CB';
+          var counter1 = setInterval(function(){
+             if( x==560){
+               clearInterval(counter1);
+             }
+             detail2.style.width=x+'px'; 
+             x+=20;
+          },20);
+          
+          var y=56;
+          var counter2 = setInterval(function(){
+            if( y==47 ){
+                clearInterval(counter2);
+            }     
+            label2.style.top=y+'px';
+            y--;
+          }, 5 );
+      }
+         
+      
+      var detail3= document.getElementById("password");
+      var label3= document.getElementById("three");
+         
+      detail3.onfocus=function(){
+          var x=400;
+        //  detail.style.border-bottom-style = '1px solid #FFC0CB';
+          var counter1 = setInterval(function(){
+             if( x==560){
+               clearInterval(counter1);
+             }
+             detail3.style.width=x+'px'; 
+             x+=20;
+          },20);
+          
+          var y=64;
+          var counter2 = setInterval(function(){
+            if( y==47 ){
+                clearInterval(counter2);
+            }     
+            label3.style.top=y+'px';
+            y--;
+          }, 5 );
+      }
+         
+      
+      var detail4= document.getElementById("confirm");
+      var label4= document.getElementById("four");
+         
+      detail4.onfocus=function(){
+          var x=400;
+        //  detail.style.border-bottom-style = '1px solid #FFC0CB';
+          var counter1 = setInterval(function(){
+             if( x==560){
+               clearInterval(counter1);
+             }
+             detail4.style.width=x+'px'; 
+             x+=20;
+          },20);
+          
+          var y=65;
+          var counter2 = setInterval(function(){
+            if( y==48){
+                clearInterval(counter2);
+            }     
+            label4.style.top=y+'px';
+            y--;
+          }, 5 );
+      }
+         
+
+    </script>
+    
+    
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
